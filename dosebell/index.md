@@ -15,3 +15,5 @@ Medicine reminders for elderly people and the families who look after them.
 Everything stays on the phone: no account, no advertising, no tracking.
 
 **[Privacy policy](/dosebell/privacy/)**
+
+Questions or feedback: [hello.apps@outlook.in](mailto:hello.apps@outlook.in)

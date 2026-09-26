@@ -24,4 +24,4 @@ Effective DATE
 ## Changes and contact
 
 If this policy changes, the new version will be on this page and in the app, with a new date.
-Questions can be sent to the developer's email address shown on APP_NAME's Play Store page.
+Questions about privacy or anything else: [hello.apps@outlook.in](mailto:hello.apps@outlook.in).

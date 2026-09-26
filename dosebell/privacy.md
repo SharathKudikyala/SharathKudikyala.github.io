@@ -47,4 +47,4 @@ A medicine never taken can be deleted with its photo and voice instruction. One 
 
 ## Changes and contact
 
-If this policy changes, the new version will be in the app and on its Play Store page, with a new date. Questions can be sent to the developer's email address shown on DoseBell's Play Store page.
+If this policy changes, the new version will be in the app and on its Play Store page, with a new date. Questions about privacy or anything else: [hello.apps@outlook.in](mailto:hello.apps@outlook.in).

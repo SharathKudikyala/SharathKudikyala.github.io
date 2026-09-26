@@ -2,6 +2,7 @@
 
 Public pages for my apps — privacy policies, and anything else a store listing needs a URL for.
 Served by GitHub Pages at https://sharathkudikyala.github.io/.
+Contact address for all apps (Play Console, policies): hello.apps@outlook.in.
 
 | App | Privacy policy |
 |---|---|
