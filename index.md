@@ -5,7 +5,7 @@ permalink: /
 
 # Apps
 
-Privacy policies and information for apps by Sharath Kudikyala.
+Privacy policies and information for our apps.
 
 | App | What it is | Pages |
 |---|---|---|
