@@ -1,0 +1,6 @@
+title: Sharath Kudikyala — Apps
+description: Privacy policies and support pages for Sharath Kudikyala's apps.
+# Pages under _templates are starting points for a new app, not published.
+exclude:
+  - README.md
+  - _templates
