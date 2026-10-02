@@ -5,11 +5,25 @@ permalink: /dosebell/privacy/
 
 # DoseBell privacy policy
 
-Effective 26 September 2026
+Effective 3 October 2026
 
 ## In short
 
-DoseBell keeps everything on your phone. There is no account, no advertising, no analytics and no tracking. Nothing about you leaves the phone unless you set up caregiver alerts, share a report, or your phone makes an encrypted backup.
+DoseBell is a reminder app for medicines, on iPhone and Android. It keeps everything on your phone. There is no account, no advertising, no analytics and no tracking. Nothing about you leaves the phone unless you set up caregiver alerts, share a report, or your phone backs itself up.
+
+## Not medical advice
+
+DoseBell only reminds you to take medicines at the times you enter. It is not a medical device and does not diagnose, treat or give medical advice. It does not recommend, promote or sell any medicine, dose or timing, and it is not connected to any doctor, pharmacy or drug company.
+
+Every medicine, amount, time and food rule in DoseBell is entered by you or your family, and should come from your doctor's prescription or your pharmacist. Always follow their instructions. If anything in the app differs from what they told you, follow them, not the app.
+
+A reminder can fail: the phone may be off, out of battery, silenced, or have notifications turned off. Do not rely on DoseBell as the only way to remember an important medicine. In an emergency, or if you are unsure about a dose, contact your doctor, pharmacist or emergency services.
+
+## How DoseBell guards against mistakes and tampering
+
+Changing, stopping or removing a medicine, and changing caregiver alerts, needs the phone's own lock first: Face ID, Touch ID, fingerprint or the phone's passcode. Taking a dose never does.
+
+Every change to a prescription is recorded in a change log with its date and time. A medicine that was ever taken cannot be deleted; it can only be stopped, and its record stays in History. If you set up a caregiver, they can be told whenever a medicine is added, changed, stopped or removed.
 
 ## What DoseBell keeps on your phone
 
@@ -23,23 +37,25 @@ Caregiver alerts (optional). If you set up a caregiver, DoseBell sends short mes
 
 Reports you share. The medication report is made on your phone as a PDF and goes only where you send it.
 
-Backups. If your phone backs up apps, DoseBell's medicines, history, photos and voice instructions are included only when the backup is end-to-end encrypted with your screen lock, so they can be restored on a new phone. You can turn backup off in your phone's settings.
+Backups. DoseBell's medicines, history, photos and voice instructions can be included in your phone's backup, so they can be restored on a new phone. On iPhone they are part of your iCloud or computer backup. On Android they are included only when the backup is end-to-end encrypted with your screen lock. You can turn backup off in your phone's settings.
 
 ## Permissions and why they are needed
 
-Notifications, alarms & reminders and full-screen alerts: to ring at each dose time, over the lock screen.
+Notifications: to ring at each dose time. On Android, DoseBell also asks for alarms & reminders and full-screen alerts, so the alarm can show over the lock screen.
 
-Camera: only when you choose to take a photo of a medicine. Photos picked from your gallery come through Android's photo picker, which gives DoseBell only the photo you choose.
+Camera: only when you choose to take a photo of a medicine. Photos picked from your gallery come through your phone's own photo picker, which gives DoseBell only the photo you choose.
 
 Microphone: only while you record a voice instruction.
 
+Face ID, Touch ID or fingerprint: only to confirm a change to a prescription. DoseBell never sees your face or fingerprint; the phone only tells it whether the check passed.
+
 Internet: only to send caregiver alerts.
 
-Running at start-up and in the background: to set the alarms again after a restart.
+On Android, running at start-up and in the background: to set the alarms again after a restart. On iPhone, DoseBell sets them again whenever you open it.
 
 ## Children
 
-DoseBell is meant to be set up by adults. It is not directed at children, and it collects nothing from anyone.
+DoseBell is meant to be set up by adults. It is not directed at children and does not knowingly collect anything from them.
 
 ## Deleting your data
 
@@ -47,4 +63,4 @@ A medicine never taken can be deleted with its photo and voice instruction. One 
 
 ## Changes and contact
 
-If this policy changes, the new version will be in the app and on its Play Store page, with a new date. Questions about privacy or anything else: [hello.apps@outlook.in](mailto:hello.apps@outlook.in).
+If this policy changes, the new version will be in the app and on its App Store and Play Store pages, with a new date. Questions about privacy or anything else: [hello.apps@outlook.in](mailto:hello.apps@outlook.in).
