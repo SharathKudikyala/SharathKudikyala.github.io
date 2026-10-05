@@ -16,3 +16,10 @@ Contact address for all apps (Play Console, policies): hello.apps@outlook.in.
 4. Push to `main`; the pages are live within a minute or two.
 
 When a policy changes, update the date at the top and the copy shown inside the app together.
+
+## DoseBell privacy policy translations
+
+`dosebell/privacy.html` shows the policy in all 17 app languages on one page, with a language chip
+for each. The text lives in `_includes/dosebell-privacy/<code>.md`; `en.md` is the original and the
+version that applies. A link can open a language directly: `/dosebell/privacy/#te`. When the policy
+changes, update `en.md` and every translation together, with the same date.

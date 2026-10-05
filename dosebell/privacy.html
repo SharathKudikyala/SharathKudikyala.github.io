@@ -1,0 +1,75 @@
+---
+layout: default
+title: DoseBell privacy policy
+permalink: /dosebell/privacy/
+---
+{%- comment -%}
+  One page, every language. Each translation is a Markdown file in _includes/dosebell-privacy/;
+  English (en.md) is the original and the one that applies. A language chip shows its section;
+  the choice is kept in the address as #te, #hi, ... so a link can open a language directly.
+{%- endcomment -%}
+{%- assign languages = "en:English,te:తెలుగు,hi:हिन्दी,mr:मराठी,ml:മലയാളം,kn:ಕನ್ನಡ,ta:தமிழ்,bn:বাংলা,es:Español,pt:Português (Brasil),fr:Français,de:Deutsch,ru:Русский,id:Bahasa Indonesia,ar:العربية,zh:简体中文,ja:日本語" | split: "," -%}
+<style>
+  .lang-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; padding: 0; list-style: none; }
+  .lang-chips li { margin: 0; }
+  .lang-chip {
+    font: inherit; font-size: 15px; line-height: 1.2; padding: 8px 14px; min-height: 40px;
+    border: 1px solid #d0d7de; border-radius: 999px; background: #f6f8fa; color: #1f2328; cursor: pointer;
+  }
+  .lang-chip:hover { border-color: #8c959f; }
+  .lang-chip:focus-visible { outline: 2px solid #0969da; outline-offset: 2px; }
+  .lang-chip[aria-pressed="true"] { background: #0969da; border-color: #0969da; color: #fff; font-weight: 600; }
+  .policy[hidden] { display: none; }
+</style>
+
+<nav aria-label="Language">
+  <ul class="lang-chips">
+  {%- for pair in languages -%}
+    {%- assign parts = pair | split: ":" %}
+    <li><button type="button" class="lang-chip" data-lang="{{ parts[0] }}" lang="{{ parts[0] }}" aria-pressed="{% if parts[0] == 'en' %}true{% else %}false{% endif %}">{{ parts[1] }}</button></li>
+  {%- endfor %}
+  </ul>
+</nav>
+
+{% for pair in languages -%}
+{%- assign code = pair | split: ":" | first -%}
+{%- assign include_path = "dosebell-privacy/" | append: code | append: ".md" -%}
+{%- capture policy %}{% include {{ include_path }} %}{% endcapture -%}
+<article class="policy" id="policy-{{ code }}" lang="{{ code }}"{% if code == "ar" %} dir="rtl"{% endif %}{% unless code == "en" %} hidden{% endunless %}>
+{{ policy | markdownify }}
+</article>
+{% endfor %}
+
+<script>
+  (function () {
+    var chips = document.querySelectorAll('.lang-chip');
+    var known = {};
+    chips.forEach(function (chip) { known[chip.dataset.lang] = true; });
+
+    function show(code, updateAddress) {
+      if (!known[code]) code = 'en';
+      chips.forEach(function (chip) {
+        chip.setAttribute('aria-pressed', String(chip.dataset.lang === code));
+      });
+      document.querySelectorAll('.policy').forEach(function (policy) {
+        policy.hidden = policy.id !== 'policy-' + code;
+      });
+      document.documentElement.lang = code;
+      if (updateAddress) {
+        history.replaceState(null, '', code === 'en' ? location.pathname : '#' + code);
+      }
+    }
+
+    function fromAddress() {
+      var hash = location.hash.replace('#', '');
+      var query = new URLSearchParams(location.search).get('lang');
+      return (hash || query || 'en').toLowerCase().split('-')[0];
+    }
+
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () { show(chip.dataset.lang, true); });
+    });
+    window.addEventListener('hashchange', function () { show(fromAddress(), false); });
+    show(fromAddress(), false);
+  })();
+</script>

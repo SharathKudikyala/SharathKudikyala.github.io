@@ -1,8 +1,3 @@
----
-title: DoseBell privacy policy
-permalink: /dosebell/privacy/
----
-
 # DoseBell privacy policy
 
 Effective 3 October 2026
