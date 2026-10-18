@@ -1,6 +1,6 @@
 # Kebijakan privasi DoseBell
 
-Berlaku sejak 11 Oktober 2026
+Berlaku sejak 18 Oktober 2026
 
 _Ini adalah terjemahan. Jika ada perbedaan dengan versi bahasa Inggris, yang berlaku adalah versi bahasa Inggris._
 
@@ -36,7 +36,7 @@ Semuanya disimpan di penyimpanan pribadi aplikasi, yang tidak bisa dibaca oleh a
 
 Peringatan pendamping (opsional). Jika Anda mengatur pendamping, DoseBell mengirim pesan singkat ke ponsel orang tersebut: nama pasien, nama obat, waktu dosis, dan apakah dosis terlewat atau dilewati, atau obat ditambah, diubah, dihentikan, atau dihapus. Pesan ini dikirim melalui sambungan terenkripsi (HTTPS) ke ntfy.sh, layanan notifikasi publik gratis yang dijalankan oleh pihak ketiga. Layanan itu mengantarkan pesan ke aplikasi ntfy milik pendamping dan menyimpannya hingga sekitar 12 jam. Siapa pun yang memiliki tautan undangan bisa membaca pesan ini, jadi bagikan tautan itu hanya kepada pendamping Anda. "Hentikan peringatan" langsung menghentikan pesan-pesan ini; jika diatur lagi, tautan pribadi yang baru akan dibuat.
 
-Laporan dan kartu yang Anda bagikan. Laporan untuk dokter dibuat di ponsel Anda dalam bentuk PDF, dan Kartu Darurat dalam bentuk gambar dan teks; masing-masing hanya dikirim ke tempat yang Anda pilih. Jika Anda menyalin teks Kartu Darurat, teks itu akan masuk ke papan klip ponsel Anda.
+Laporan dan kartu yang Anda bagikan. Laporan untuk dokter dibuat di ponsel Anda dalam bentuk PDF, dan Kartu Darurat dalam bentuk gambar dan teks; masing-masing hanya dikirim ke tempat yang Anda pilih. Jika Anda menyalin teks Kartu Darurat, teks itu akan masuk ke papan klip ponsel Anda. Hasil lab dan resep yang Anda bagikan dikirim sebagai foto atau PDF yang tersimpan, juga hanya ke tempat yang Anda tuju.
 
 Cadangan. Data, foto, file PDF, dan petunjuk suara di DoseBell bisa ikut masuk ke cadangan ponsel Anda, sehingga bisa dipulihkan di ponsel baru. Di iPhone, data ini menjadi bagian dari cadangan iCloud atau cadangan di komputer Anda. Di Android, data ini hanya ikut dicadangkan jika cadangan tersebut dienkripsi end-to-end dengan kunci layar Anda. Anda bisa mematikan pencadangan di pengaturan ponsel.
 
@@ -48,7 +48,7 @@ Pemindaian resep. Foto dibaca di ponsel itu sendiri dan tidak diunggah. Di Andro
 
 ## Izin dan alasannya
 
-Notifikasi: agar alarm berbunyi pada setiap waktu dosis, dan untuk pengingat yang Anda nyalakan (air minum, jalan kaki, tidur, dan janji temu). Di Android, DoseBell juga meminta izin alarm & pengingat dan peringatan layar penuh, agar alarm bisa muncul di atas layar kunci, serta izin berjalan tanpa batasan baterai, agar alarm tidak tertahan.
+Notifikasi: agar alarm berbunyi pada setiap waktu dosis, dan untuk pengingat yang Anda nyalakan (air minum, jalan kaki, tidur, dan janji temu). Di Android, DoseBell juga meminta izin alarm & pengingat dan peringatan layar penuh, agar alarm bisa muncul di atas layar kunci, serta izin berjalan tanpa batasan baterai, agar alarm tidak tertahan. Jika dosis ditandai sudah diminum tepat saat alarm berbunyi, notifikasi senyap nanti dapat menanyakan apakah obat itu benar-benar sudah diminum.
 
 Kamera: hanya saat Anda memilih untuk memotret obat, hasil lab, atau resep, atau untuk memindai resep. Foto yang dipilih dari galeri melalui pemilih foto bawaan ponsel, dan file PDF melalui pemilih file bawaannya; masing-masing hanya memberikan apa yang Anda pilih kepada DoseBell.
 

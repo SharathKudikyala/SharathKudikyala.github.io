@@ -1,6 +1,6 @@
 # DoseBell privacy policy
 
-Effective 11 October 2026
+Effective 18 October 2026
 
 ## In short
 
@@ -34,7 +34,7 @@ All of it is stored in the app's private storage, which other apps cannot read. 
 
 Caregiver alerts (optional). If you set up a caregiver, DoseBell sends short messages to that person's phone: the patient's name, the medicine's name, the dose time, and whether a dose was missed or skipped or a medicine was added, changed, stopped or removed. They are sent over an encrypted connection (HTTPS) to ntfy.sh, a free public notification service run by a third party, which delivers them to the caregiver's ntfy app and keeps them for up to about 12 hours. Anyone who has the invite link can read these messages, so share it only with your caregiver. "Stop alerts" ends them at once; setting up again creates a new private link.
 
-Reports and cards you share. The doctor's report is made on your phone as a PDF, and the Emergency card as a picture and text; each goes only where you send it. Copying the Emergency card's text puts it on your phone's clipboard.
+Reports and cards you share. The doctor's report is made on your phone as a PDF, and the Emergency card as a picture and text; each goes only where you send it. Copying the Emergency card's text puts it on your phone's clipboard. Lab reports and prescriptions you share go as the saved photo or PDF, also only where you send them.
 
 Backups. DoseBell's data, photos, PDF files and voice instructions can be included in your phone's backup, so they can be restored on a new phone. On iPhone they are part of your iCloud or computer backup. On Android they are included only when the backup is end-to-end encrypted with your screen lock. You can turn backup off in your phone's settings.
 
@@ -46,7 +46,7 @@ Prescription scanning. The photo is read on the phone itself and is not uploaded
 
 ## Permissions and why they are needed
 
-Notifications: to ring at each dose time, and for the reminders you turn on (water, walk, sleep and appointments). On Android, DoseBell also asks for alarms & reminders and full-screen alerts, so the alarm can show over the lock screen, and to run without battery restrictions, so alarms are not held back.
+Notifications: to ring at each dose time, and for the reminders you turn on (water, walk, sleep and appointments). On Android, DoseBell also asks for alarms & reminders and full-screen alerts, so the alarm can show over the lock screen, and to run without battery restrictions, so alarms are not held back. If a dose is marked taken just as its alarm rings, a quiet notification may ask later whether it was really taken.
 
 Camera: only when you choose to take a photo of a medicine, a lab report or a prescription, or to scan a prescription. Photos picked from your gallery come through your phone's own photo picker, and PDF files through its own file picker; each gives DoseBell only what you choose.
 

@@ -1,6 +1,6 @@
 # Datenschutzerklärung für DoseBell
 
-Gültig ab 11. Oktober 2026
+Gültig ab 18. Oktober 2026
 
 _Dies ist eine Übersetzung. Wenn sie von der englischen Fassung abweicht, gilt die englische Fassung._
 
@@ -36,7 +36,7 @@ All das liegt im privaten Speicher der App, den andere Apps nicht lesen können.
 
 Hinweise an die Kontaktperson (freiwillig). Wenn Sie eine Kontaktperson einrichten, schickt DoseBell kurze Nachrichten auf das Handy dieser Person: den Namen des Patienten, den Namen des Medikaments, die Einnahmezeit und ob eine Einnahme verpasst oder ausgelassen wurde oder ob ein Medikament hinzugefügt, geändert, abgesetzt oder entfernt wurde. Sie werden über eine verschlüsselte Verbindung (HTTPS) an ntfy.sh gesendet, einen kostenlosen öffentlichen Benachrichtigungsdienst eines Drittanbieters. Dieser stellt sie in der ntfy-App der Kontaktperson zu und bewahrt sie bis zu etwa 12 Stunden auf. Jeder, der den Einladungslink hat, kann diese Nachrichten lesen. Teilen Sie ihn daher nur mit Ihrer Kontaktperson. „Hinweise beenden“ stoppt sie sofort; wenn Sie die Hinweise neu einrichten, entsteht ein neuer privater Link.
 
-Berichte und Karten, die Sie teilen. Der Arztbericht wird auf Ihrem Handy als PDF erstellt, die Notfallkarte als Bild und Text; beides geht nur dorthin, wohin Sie es senden. Wenn Sie den Text der Notfallkarte kopieren, liegt er in der Zwischenablage Ihres Handys.
+Berichte und Karten, die Sie teilen. Der Arztbericht wird auf Ihrem Handy als PDF erstellt, die Notfallkarte als Bild und Text; beides geht nur dorthin, wohin Sie es senden. Wenn Sie den Text der Notfallkarte kopieren, liegt er in der Zwischenablage Ihres Handys. Laborbefunde und Rezepte, die Sie teilen, gehen als das gespeicherte Foto oder PDF hinaus, ebenfalls nur dorthin, wohin Sie sie senden.
 
 Sicherungen. Die Daten, Fotos, PDF-Dateien und gesprochenen Anleitungen aus DoseBell können in die Sicherung Ihres Handys aufgenommen werden, damit sie auf einem neuen Handy wiederhergestellt werden können. Auf dem iPhone sind sie Teil Ihrer iCloud- oder Computer-Sicherung. Auf Android werden sie nur aufgenommen, wenn die Sicherung mit Ihrer Displaysperre Ende-zu-Ende-verschlüsselt ist. Sie können die Sicherung in den Einstellungen Ihres Handys ausschalten.
 
@@ -48,7 +48,7 @@ Rezept scannen. Das Foto wird auf dem Handy selbst gelesen und nicht hochgeladen
 
 ## Berechtigungen und wofür sie gebraucht werden
 
-Mitteilungen: damit es zu jeder Einnahmezeit klingelt, und für die Erinnerungen, die Sie einschalten (Wasser, Spaziergang, Schlaf und Termine). Auf Android fragt DoseBell außerdem nach „Wecker und Erinnerungen“ und nach Vollbild-Benachrichtigungen, damit der Alarm auch auf dem Sperrbildschirm erscheinen kann, und danach, ohne Akku-Einschränkungen laufen zu dürfen, damit Alarme nicht zurückgehalten werden.
+Mitteilungen: damit es zu jeder Einnahmezeit klingelt, und für die Erinnerungen, die Sie einschalten (Wasser, Spaziergang, Schlaf und Termine). Auf Android fragt DoseBell außerdem nach „Wecker und Erinnerungen“ und nach Vollbild-Benachrichtigungen, damit der Alarm auch auf dem Sperrbildschirm erscheinen kann, und danach, ohne Akku-Einschränkungen laufen zu dürfen, damit Alarme nicht zurückgehalten werden. Wird eine Dosis gleich beim Klingeln des Alarms als genommen markiert, kann eine stille Benachrichtigung später fragen, ob sie wirklich genommen wurde.
 
 Kamera: nur, wenn Sie ein Foto von einem Medikament, einem Laborbefund oder einem Rezept machen oder ein Rezept scannen möchten. Fotos aus Ihrer Galerie kommen über die Fotoauswahl Ihres Handys und PDF-Dateien über seine Dateiauswahl; beide geben DoseBell nur das, was Sie auswählen.
 

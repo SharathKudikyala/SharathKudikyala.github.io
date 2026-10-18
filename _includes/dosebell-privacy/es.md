@@ -1,6 +1,6 @@
 # Política de privacidad de DoseBell
 
-Vigente desde el 11 de octubre de 2026
+Vigente desde el 18 de octubre de 2026
 
 _Esta es una traducción. Si difiere de la versión en inglés, se aplica la versión en inglés._
 
@@ -36,7 +36,7 @@ Todo esto se guarda en el almacenamiento privado de la app, que otras apps no pu
 
 Avisos al cuidador (opcional). Si usted configura un cuidador, DoseBell envía mensajes cortos al teléfono de esa persona: el nombre del paciente, el nombre de la medicina, la hora de la dosis, y si una dosis no se tomó o se omitió, o si una medicina se agregó, se cambió, se suspendió o se quitó. Se envían por una conexión cifrada (HTTPS) a ntfy.sh, un servicio público y gratuito de notificaciones administrado por un tercero, que los entrega en la app ntfy del cuidador y los guarda hasta unas 12 horas. Cualquier persona que tenga el enlace de invitación puede leer estos mensajes; por eso, compártalo solo con su cuidador. "Detener avisos" los termina de inmediato; si los configura de nuevo, se crea un enlace privado nuevo.
 
-Informes y tarjetas que usted comparte. El informe para el médico se crea en su teléfono como un PDF, y la Tarjeta de emergencia como una imagen y un texto; cada uno va únicamente a donde usted lo envíe. Si copia el texto de la Tarjeta de emergencia, queda en el portapapeles de su teléfono.
+Informes y tarjetas que usted comparte. El informe para el médico se crea en su teléfono como un PDF, y la Tarjeta de emergencia como una imagen y un texto; cada uno va únicamente a donde usted lo envíe. Si copia el texto de la Tarjeta de emergencia, queda en el portapapeles de su teléfono. Los análisis y recetas que compartes se envían como la foto o el PDF guardados, también solo adonde tú los mandes.
 
 Copias de seguridad. Los datos, las fotos, los archivos PDF y las instrucciones de voz de DoseBell pueden incluirse en la copia de seguridad de su teléfono, para poder restaurarlos en un teléfono nuevo. En iPhone forman parte de su copia de seguridad de iCloud o de su computadora. En Android solo se incluyen cuando la copia de seguridad está cifrada de extremo a extremo con el bloqueo de pantalla. Puede desactivar la copia de seguridad en la configuración de su teléfono.
 
@@ -48,7 +48,7 @@ Escaneo de recetas. La foto se lee en el propio teléfono y no se sube a ningún
 
 ## Permisos y para qué se necesitan
 
-Notificaciones: para sonar a la hora de cada dosis, y para los recordatorios que usted active (agua, caminata, sueño y citas). En Android, DoseBell también pide los permisos de "Alarmas y recordatorios" y de avisos a pantalla completa, para que la alarma aparezca sobre la pantalla de bloqueo, y pide funcionar sin restricciones de batería, para que las alarmas no se retrasen.
+Notificaciones: para sonar a la hora de cada dosis, y para los recordatorios que usted active (agua, caminata, sueño y citas). En Android, DoseBell también pide los permisos de "Alarmas y recordatorios" y de avisos a pantalla completa, para que la alarma aparezca sobre la pantalla de bloqueo, y pide funcionar sin restricciones de batería, para que las alarmas no se retrasen. Si una dosis se marca como tomada justo cuando suena su alarma, una notificación silenciosa puede preguntar más tarde si de verdad se tomó.
 
 Cámara: solo cuando usted decide tomar una foto de una medicina, de un análisis o de una receta, o escanear una receta. Las fotos que elige de su galería pasan por el selector de fotos del propio teléfono, y los archivos PDF por su selector de archivos; cada uno le da a DoseBell solo lo que usted elige.
 

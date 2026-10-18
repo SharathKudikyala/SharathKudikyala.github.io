@@ -1,6 +1,6 @@
 # Politique de confidentialité de DoseBell
 
-En vigueur depuis le 11 octobre 2026
+En vigueur depuis le 18 octobre 2026
 
 _Ceci est une traduction. En cas de différence avec la version anglaise, c’est la version anglaise qui s’applique._
 
@@ -36,7 +36,7 @@ Tout cela est stocké dans l’espace privé de l’application, que les autres 
 
 Alertes pour l’aidant (facultatif). Si vous configurez un aidant, DoseBell envoie de courts messages sur le téléphone de cette personne : le nom du patient, le nom du médicament, l’heure de la prise, et si une prise a été manquée ou sautée, ou si un médicament a été ajouté, modifié, arrêté ou retiré. Ils sont envoyés par une connexion chiffrée (HTTPS) à ntfy.sh, un service public et gratuit de notifications géré par un tiers, qui les transmet à l’application ntfy de l’aidant et les conserve jusqu’à environ 12 heures. Toute personne qui a le lien d’invitation peut lire ces messages : ne le partagez donc qu’avec votre aidant. « Arrêter les alertes » y met fin immédiatement ; une nouvelle configuration crée un nouveau lien privé.
 
-Rapports et cartes que vous partagez. Le rapport pour le médecin est créé sur votre téléphone sous forme de PDF, et la Carte d’urgence sous forme d’image et de texte ; chacun ne va que là où vous l’envoyez. Copier le texte de la Carte d’urgence le place dans le presse-papiers de votre téléphone.
+Rapports et cartes que vous partagez. Le rapport pour le médecin est créé sur votre téléphone sous forme de PDF, et la Carte d’urgence sous forme d’image et de texte ; chacun ne va que là où vous l’envoyez. Copier le texte de la Carte d’urgence le place dans le presse-papiers de votre téléphone. Les analyses et ordonnances que vous partagez partent telles que la photo ou le PDF enregistrés, elles aussi uniquement là où vous les envoyez.
 
 Sauvegardes. Les données, les photos, les fichiers PDF et les consignes vocales de DoseBell peuvent être inclus dans la sauvegarde de votre téléphone, pour pouvoir être restaurés sur un nouveau téléphone. Sur iPhone, ils font partie de votre sauvegarde iCloud ou sur ordinateur. Sur Android, ils ne sont inclus que si la sauvegarde est chiffrée de bout en bout avec le verrouillage de votre écran. Vous pouvez désactiver la sauvegarde dans les réglages de votre téléphone.
 
@@ -48,7 +48,7 @@ Scan d’ordonnance. La photo est lue sur le téléphone lui-même et n’est pa
 
 ## Les autorisations et à quoi elles servent
 
-Notifications : pour sonner à l’heure de chaque prise, et pour les rappels que vous activez (eau, marche, sommeil et rendez-vous). Sur Android, DoseBell demande aussi « Alarmes et rappels » et les alertes en plein écran, pour que l’alarme puisse s’afficher sur l’écran de verrouillage, ainsi que de fonctionner sans restriction de batterie, pour que les alarmes ne soient pas retardées.
+Notifications : pour sonner à l’heure de chaque prise, et pour les rappels que vous activez (eau, marche, sommeil et rendez-vous). Sur Android, DoseBell demande aussi « Alarmes et rappels » et les alertes en plein écran, pour que l’alarme puisse s’afficher sur l’écran de verrouillage, ainsi que de fonctionner sans restriction de batterie, pour que les alarmes ne soient pas retardées. Si une prise est marquée comme faite au moment même où l’alarme sonne, une notification silencieuse peut demander plus tard si elle a vraiment été prise.
 
 Appareil photo : seulement quand vous choisissez de prendre en photo un médicament, un résultat d’analyse ou une ordonnance, ou de scanner une ordonnance. Les photos choisies dans votre galerie passent par le sélecteur de photos de votre téléphone, et les fichiers PDF par son sélecteur de fichiers ; chacun ne donne à DoseBell que ce que vous choisissez.
 

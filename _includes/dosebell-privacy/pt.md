@@ -1,6 +1,6 @@
 # Política de privacidade do DoseBell
 
-Em vigor desde 11 de outubro de 2026
+Em vigor desde 18 de outubro de 2026
 
 _Esta é uma tradução. Se ela for diferente da versão em inglês, vale a versão em inglês._
 
@@ -36,7 +36,7 @@ Tudo isso fica guardado no armazenamento particular do app, que outros apps não
 
 Alertas para o cuidador (opcional). Se você configurar um cuidador, o DoseBell envia mensagens curtas para o celular dessa pessoa: o nome do paciente, o nome do remédio, o horário da dose e se uma dose foi esquecida ou pulada, ou se um remédio foi adicionado, alterado, interrompido ou removido. Elas são enviadas por uma conexão criptografada (HTTPS) para o ntfy.sh, um serviço público e gratuito de notificações mantido por terceiros, que as entrega no app ntfy do cuidador e as guarda por até cerca de 12 horas. Qualquer pessoa que tenha o link do convite pode ler essas mensagens, por isso compartilhe o link só com o seu cuidador. "Parar alertas" encerra as mensagens na hora; ao configurar de novo, é criado um novo link particular.
 
-Relatórios e cartões que você compartilha. O relatório para o médico é criado no seu celular como um PDF, e o Cartão de emergência como uma imagem e um texto; cada um vai apenas para onde você enviar. Copiar o texto do Cartão de emergência coloca esse texto na área de transferência do celular.
+Relatórios e cartões que você compartilha. O relatório para o médico é criado no seu celular como um PDF, e o Cartão de emergência como uma imagem e um texto; cada um vai apenas para onde você enviar. Copiar o texto do Cartão de emergência coloca esse texto na área de transferência do celular. Os exames e receitas que você compartilha vão como a foto ou o PDF guardados, também apenas para onde você os enviar.
 
 Backups. Os dados, as fotos, os arquivos PDF e as instruções de voz do DoseBell podem entrar no backup do seu celular, para que possam ser restaurados em um celular novo. No iPhone, eles fazem parte do backup do iCloud ou do computador. No Android, eles só entram quando o backup é criptografado de ponta a ponta com o bloqueio de tela. Você pode desativar o backup nas configurações do celular.
 
@@ -48,7 +48,7 @@ Digitalização de receitas. A foto é lida no próprio celular e não é enviad
 
 ## Permissões e por que são necessárias
 
-Notificações: para tocar no horário de cada dose, e para os lembretes que você ativar (água, caminhada, sono e consultas). No Android, o DoseBell também pede "Alarmes e lembretes" e alertas em tela cheia, para que o alarme possa aparecer sobre a tela de bloqueio, e pede para funcionar sem restrições de bateria, para que os alarmes não sejam atrasados.
+Notificações: para tocar no horário de cada dose, e para os lembretes que você ativar (água, caminhada, sono e consultas). No Android, o DoseBell também pede "Alarmes e lembretes" e alertas em tela cheia, para que o alarme possa aparecer sobre a tela de bloqueio, e pede para funcionar sem restrições de bateria, para que os alarmes não sejam atrasados. Se uma dose for marcada como tomada assim que o alarme toca, uma notificação silenciosa pode perguntar mais tarde se ela foi mesmo tomada.
 
 Câmera: só quando você escolhe tirar uma foto de um remédio, de um exame ou de uma receita, ou digitalizar uma receita. As fotos escolhidas da sua galeria passam pelo seletor de fotos do próprio celular, e os arquivos PDF pelo seletor de arquivos dele; cada um entrega ao DoseBell apenas o que você escolher.
 
