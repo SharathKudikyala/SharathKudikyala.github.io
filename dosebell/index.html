@@ -1,0 +1,332 @@
+---
+layout: null
+permalink: /dosebell/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoseBell: medicine reminder with photos and family alerts</title>
+<meta name="description" content="DoseBell rings at every dose with a photo of the real medicine, alerts family if a dose is missed, and keeps BP, sugar, doctors, lab reports and an emergency card in one place. No account, no ads.">
+<meta property="og:title" content="DoseBell: remember every dose, every day">
+<meta property="og:description" content="Medicine reminders with photos, family alerts, health readings and records. Private, in 17 languages.">
+<meta property="og:image" content="https://sharathkudikyala.github.io/dosebell/img/alarm.jpg">
+<link rel="icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #C94A1D; --brand-dark: #9C3010; --brand-soft: #FFF3EA;
+    --ink: #2B1C17; --muted: #6E5248; --line: #EEDFD5;
+    --page: #FBF7F3; --card: #FFFFFF; --teal: #1F6B5C; --teal-soft: #DDF0EA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans', system-ui, sans-serif; color: var(--ink); background: var(--page); line-height: 1.6; font-size: 17px; }
+  a { color: var(--brand); }
+  img { max-width: 100%; display: block; }
+  .hero .wrap > *, .feature > * { min-width: 0; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  /* Top bar */
+  .top { position: absolute; inset: 0 0 auto 0; z-index: 2; }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 800; font-size: 21px; }
+  .logo img { width: 38px; height: 38px; border-radius: 10px; box-shadow: 0 4px 12px rgba(60,10,0,.3); }
+  .top nav { display: flex; gap: 22px; }
+  .top nav a { color: #FFE3D3; text-decoration: none; font-weight: 600; font-size: 15px; }
+  .top nav a:hover { color: #fff; }
+
+  /* Hero */
+  .hero { color: #fff; position: relative;
+    background: radial-gradient(900px 500px at 85% 0%, rgba(255,170,120,.35), transparent 60%),
+                linear-gradient(160deg, #DA5B2C 0%, #C2441A 50%, #9C3010 100%); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding-top: 120px; }
+  .hero h1 { font-size: clamp(38px, 5.4vw, 62px); line-height: 1.1; font-weight: 800; letter-spacing: -.02em; }
+  .hl { display: inline-block; background: var(--brand-soft); color: #B33A10; border-radius: 12px; padding: 0 12px; transform: rotate(-1.5deg); }
+  .hero p.lead { font-size: 20px; color: #FFE3D3; margin: 22px 0 30px; max-width: 520px; }
+  .stores { display: flex; flex-wrap: wrap; gap: 12px; }
+  .store { display: inline-flex; align-items: center; gap: 10px; background: #1b1b1b; color: #fff; text-decoration: none;
+    padding: 10px 20px; border-radius: 14px; min-height: 56px; box-shadow: 0 6px 18px rgba(60,10,0,.35); }
+  .store:hover { background: #000; }
+  .store svg { width: 26px; height: 26px; flex: none; }
+  .store small { display: block; font-size: 11px; opacity: .8; line-height: 1.1; }
+  .store b { display: block; font-size: 18px; line-height: 1.2; }
+  .ticks { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 26px; font-weight: 600; color: #FFE3D3; font-size: 15px; }
+  .ticks span::before { content: "✓ "; color: #fff; }
+  .hero .phone { margin: 0 auto -90px; width: min(340px, 80%); }
+
+  /* Phone frame */
+  .phone { background: #111; border-radius: 46px; padding: 11px; box-shadow: 0 30px 60px rgba(60,10,0,.35), inset 0 0 0 3px #2a2a2a; }
+  .phone img { border-radius: 36px; aspect-ratio: 1206/2622; object-fit: cover; width: 100%; }
+
+  /* Who it is for */
+  section { padding: 90px 0; }
+  .eyebrow { color: var(--brand); font-weight: 800; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  h2 { font-size: clamp(30px, 3.6vw, 42px); line-height: 1.15; letter-spacing: -.015em; margin: 8px 0 14px; font-weight: 800; }
+  .intro { max-width: 680px; color: var(--muted); font-size: 19px; }
+  .who { padding-top: 150px; }
+  .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  .who-card { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 26px; }
+  .who-card .ic { width: 48px; height: 48px; border-radius: 14px; background: var(--brand-soft); color: var(--brand); display: grid; place-items: center; font-size: 24px; margin-bottom: 14px; }
+  .who-card h3 { font-size: 20px; margin-bottom: 6px; }
+  .who-card p { color: var(--muted); font-size: 16px; }
+
+  /* Feature rows */
+  .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 50px 0; }
+  .feature + .feature { border-top: 1px solid var(--line); }
+  .feature.flip .text { order: 2; }
+  .feature .phone { width: min(300px, 78%); margin: 0 auto; }
+  .feature h3 { font-size: clamp(26px, 3vw, 34px); line-height: 1.2; font-weight: 800; letter-spacing: -.01em; margin: 6px 0 12px; }
+  .feature p { color: var(--muted); font-size: 18px; }
+  .feature ul { margin-top: 16px; list-style: none; }
+  .feature li { padding: 6px 0 6px 30px; position: relative; }
+  .feature li::before { content: ""; position: absolute; left: 0; top: 13px; width: 18px; height: 18px; border-radius: 50%;
+    background: var(--teal-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231F6B5C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .06em; background: #6B4FD8; color: #fff; padding: 3px 9px; border-radius: 8px; vertical-align: middle; margin-left: 6px; }
+  .new { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .06em; background: var(--teal-soft); color: var(--teal); padding: 3px 9px; border-radius: 8px; }
+
+  /* Private + languages */
+  .private { background: linear-gradient(160deg, #C2441A, #9C3010); color: #fff; border-radius: 32px; padding: 60px 40px; text-align: center; }
+  .private h2 { color: #fff; }
+  .private .intro { color: #FFE3D3; margin: 0 auto; }
+  .pills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 34px 0; text-align: left; }
+  .pill { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 18px; padding: 20px; }
+  .pill b { display: block; font-size: 18px; }
+  .pill span { color: #FFE3D3; font-size: 15px; }
+  .langs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .langs span { background: #fff; color: #B33A10; font-weight: 700; font-size: 15px; padding: 6px 14px; border-radius: 999px; }
+
+  /* FAQ */
+  .faq { max-width: 780px; margin: 30px auto 0; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px 22px; margin-bottom: 12px; }
+  summary { font-weight: 700; font-size: 18px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--brand); font-size: 24px; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--muted); margin-top: 10px; }
+
+  /* Final call + footer */
+  .cta { text-align: center; }
+  .cta .stores { justify-content: center; margin-top: 26px; }
+  footer { border-top: 1px solid var(--line); padding: 34px 0 50px; color: var(--muted); font-size: 15px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 30px; justify-content: space-between; }
+  footer .links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .note { max-width: 640px; }
+
+  @media (max-width: 860px) {
+    .top nav { display: none; }
+    .hero .wrap { grid-template-columns: 1fr; text-align: center; padding-top: 100px; }
+    .hero p.lead { margin-left: auto; margin-right: auto; }
+    .stores, .ticks { justify-content: center; }
+    .who-grid, .pills { grid-template-columns: 1fr; }
+    .feature { grid-template-columns: 1fr; gap: 30px; padding: 40px 0; }
+    .feature.flip .text { order: 0; }
+    .private { padding: 44px 22px; border-radius: 24px; }
+    section { padding: 60px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/dosebell/"><img src="img/icon.png" alt="">DoseBell</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#private">Privacy</a>
+      <a href="#faq">Questions</a>
+      <a href="/dosebell/privacy/">Privacy policy</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Remember <span class="hl">every dose</span><br>every day</h1>
+      <p class="lead">A medicine reminder for people on daily medicines for BP, diabetes, thyroid or the heart, and for the family who look after them.</p>
+      <div class="stores">
+        <a class="store" href="https://apps.apple.com/app/id6819379067">
+          <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>
+          <span><small>Download on the</small><b>App Store</b></span>
+        </a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.dosebell.app">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3l10.1 9.7-10.1 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2z" fill="#34A853"/><path d="M17.1 8.7L13.7 12l3.4 3.3 3.8-2.2c.8-.5.8-1.7 0-2.2l-3.8-2.2z" fill="#FBBC04"/><path d="M3.6 2.3c.3-.2.8-.2 1.2 0l12.3 6.4-3.4 3.3L3.6 2.3z" fill="#EA4335"/><path d="M13.7 12l3.4 3.3-12.3 6.4c-.4.2-.9.2-1.2 0L13.7 12z" fill="#4285F4"/></svg>
+          <span><small>Get it on</small><b>Google Play</b></span>
+        </a>
+      </div>
+      <div class="ticks"><span>No account</span><span>No ads</span><span>Stays on your phone</span><span>17 languages</span></div>
+    </div>
+    <div class="phone"><img src="img/alarm.jpg" alt="DoseBell alarm screen showing a photo of Metformin 500 mg, 1 tablet, with Taken, Snooze and Skip buttons"></div>
+  </div>
+</div>
+
+<section class="who">
+  <div class="wrap">
+    <div class="eyebrow">Who it is for</div>
+    <h2>Made for medicines you take for years</h2>
+    <p class="intro">Long-term medicines are easy to forget and hard to keep track of. DoseBell makes each dose clear at a glance, even without reading, and lets the family help from afar.</p>
+    <div class="who-grid">
+      <div class="who-card"><div class="ic">👵</div><h3>Elders</h3><p>Large text, big buttons, and a photo of the actual strip or bottle, so the right medicine is recognised by sight.</p></div>
+      <div class="who-card"><div class="ic">👪</div><h3>Family and caregivers</h3><p>Set it up once on a parent's phone, record instructions in your own voice, and get alerted if a dose is missed.</p></div>
+      <div class="who-card"><div class="ic">❤️</div><h3>Anyone on daily medicines</h3><p>BP, diabetes, thyroid, cholesterol, heart: keep doses, readings, doctors and reports together.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="padding-top:0">
+  <div class="wrap">
+
+    <div class="feature">
+      <div class="text">
+        <div class="eyebrow">Reminders</div>
+        <h3>An alarm you cannot miss, with each medicine's photo</h3>
+        <p>At each dose time DoseBell rings with a photo of the real medicine, how much to take, and whether it goes before or after food.</p>
+        <ul>
+          <li>Starts with a short vibration, then the sound grows from soft to full</li>
+          <li>Reads the instruction aloud, or plays a family member's voice note</li>
+          <li>Taken, Snooze or Skip; rings again if it is ignored</li>
+          <li>Tablets, halves, syrups, drops, inhalers, injections and more</li>
+        </ul>
+      </div>
+      <div class="phone"><img src="img/meds.jpg" alt="Medicines list: each medicine with its photo, times, food rule and tablets left" loading="lazy"></div>
+    </div>
+
+    <div class="feature flip">
+      <div class="text">
+        <div class="eyebrow">Today</div>
+        <h3>The whole day's medicines at a glance</h3>
+        <p>See what has been taken, what is next and when, in the order it is due. Every medicine shows its time, food rule and how many tablets are left.</p>
+      </div>
+      <div class="phone"><img src="img/today.jpg" alt="Today screen: 4 of 6 taken today, next dose Metformin at 8:00 PM" loading="lazy"></div>
+    </div>
+
+    <div class="feature">
+      <div class="text">
+        <div class="eyebrow">Family alerts · optional</div>
+        <h3>A son or daughter is told if a dose is missed</h3>
+        <p>Alerts go to a family member's phone through the free ntfy app. No account and no phone number are needed.</p>
+        <ul>
+          <li>Missed doses, after 30 or 60 minutes</li>
+          <li>Skipped doses, as soon as they are skipped</li>
+          <li>Medicines added, changed, stopped or removed</li>
+        </ul>
+      </div>
+      <div class="phone"><img src="img/caregiver.jpg" alt="Caregiver screen: alerts go to Ravi" loading="lazy"></div>
+    </div>
+
+    <div class="feature flip">
+      <div class="text">
+        <span class="new">NEW IN 1.1</span>
+        <h3>Blood pressure, sugar, water, walks and sleep</h3>
+        <p>Note a reading in a few taps and see it as a simple chart to show the doctor. DoseBell records readings only; it never judges them.</p>
+        <ul>
+          <li>BP, sugar (fasting or after food), pulse, weight, oxygen, temperature</li>
+          <li>Water glasses with gentle reminders, daily walk and sleep</li>
+        </ul>
+      </div>
+      <div class="phone"><img src="img/health.jpg" alt="Health screen with blood pressure, sugar, water, walk, sleep and pulse" loading="lazy"></div>
+    </div>
+
+    <div class="feature">
+      <div class="text">
+        <span class="new">NEW IN 1.1</span>
+        <h3>Doctors, appointments and lab reports in one place</h3>
+        <p>Keep each doctor's number and clinic, get a reminder before appointments, and save lab reports and prescriptions as photos or PDFs, ready to share.</p>
+      </div>
+      <div class="phone"><img src="img/records.jpg" alt="Records: appointments, doctors, lab reports, prescriptions" loading="lazy"></div>
+    </div>
+
+    <div class="feature flip">
+      <div class="text">
+        <span class="new">NEW IN 1.1</span>
+        <h3>An emergency card, ready when it matters</h3>
+        <p>Blood group, allergies, conditions, current medicines and who to call, on one card to show a doctor or share as a picture. Set it as the lock screen so it can be read without unlocking.</p>
+      </div>
+      <div class="phone"><img src="img/emergency.jpg" alt="Emergency card: blood group B+, allergies and conditions" loading="lazy"></div>
+    </div>
+
+    <div class="feature">
+      <div class="text">
+        <span class="new">NEW IN 1.1</span>
+        <h3>Scan a prescription to add medicines <span class="tag">BETA</span></h3>
+        <p>Take a photo of a printed prescription. DoseBell reads it on the phone, nothing is uploaded, and lists the medicines it found for you to check before adding.</p>
+      </div>
+      <div class="phone"><img src="img/scan1.jpg" alt="Scan prescription: 3 medicines found to check" loading="lazy"></div>
+    </div>
+
+    <div class="feature flip">
+      <div class="text">
+        <div class="eyebrow">For the doctor's visit</div>
+        <h3>Every dose recorded, and a PDF report</h3>
+        <p>See each day's doses taken, skipped or missed, and share a one-page medicine report with the doctor or family.</p>
+        <ul>
+          <li>Changing or removing a medicine needs the phone's fingerprint, face or PIN</li>
+          <li>Every change is recorded with its date and time</li>
+        </ul>
+      </div>
+      <div class="phone"><img src="img/doses.jpg" alt="Dose history: taken 39 of 40 doses in the last 7 days" loading="lazy"></div>
+    </div>
+
+  </div>
+</section>
+
+<section id="private" style="padding-top:20px">
+  <div class="wrap">
+    <div class="private">
+      <h2>Private by design</h2>
+      <p class="intro">Medicines and health records are personal. DoseBell keeps them on the phone.</p>
+      <div class="pills">
+        <div class="pill"><b>No account, no login</b><span>Open the app and start.</span></div>
+        <div class="pill"><b>No ads, no tracking</b><span>Nothing is sold or shared.</span></div>
+        <div class="pill"><b>Stays on your phone</b><span>Nothing leaves it unless you turn on family alerts or share something.</span></div>
+      </div>
+      <h3 style="font-size:22px;margin-bottom:16px">In 17 languages</h3>
+      <div class="langs">
+        <span>English</span><span lang="hi">हिन्दी</span><span lang="te">తెలుగు</span><span lang="ta">தமிழ்</span><span lang="kn">ಕನ್ನಡ</span><span lang="ml">മലയാളം</span><span lang="mr">मराठी</span><span lang="bn">বাংলা</span><span lang="es">Español</span><span lang="pt">Português</span><span lang="fr">Français</span><span lang="de">Deutsch</span><span lang="ru">Русский</span><span lang="id">Bahasa Indonesia</span><span lang="ar">العربية</span><span lang="zh">中文</span><span lang="ja">日本語</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div style="text-align:center"><div class="eyebrow">Questions</div><h2>Good to know</h2></div>
+    <div class="faq">
+      <details><summary>Do I need to create an account?</summary><p>No. There is no account and no login. Everything you add stays on the phone.</p></details>
+      <details><summary>Does the family member need DoseBell too?</summary><p>No. They install the free ntfy app and open the invite you send. They are told on their phone when a dose is missed or skipped, or when medicines change.</p></details>
+      <details><summary>Does it work on iPhone and Android?</summary><p>Yes. On Android the alarm opens full screen, even over the lock screen. On iPhone it rings as a time-sensitive notification with DoseBell's chime; tapping it opens the alarm screen.</p></details>
+      <details><summary>Can one phone look after more than one person?</summary><p>Yes. Each person has their own profile and medicines, and the alarm always shows whose dose it is.</p></details>
+      <details><summary>The alarm does not ring on my Android phone. Why?</summary><p>Some phones stop apps in the background to save battery. In DoseBell, open the battery tip and allow it to run in the background; the app shows the steps for your phone.</p></details>
+      <details><summary>Is DoseBell medical advice?</summary><p>No. DoseBell is a reminder and record keeper, not a medical device. It does not recommend any medicine, dose or timing. Always follow your doctor's or pharmacist's instructions.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta" style="padding-top:20px">
+  <div class="wrap">
+    <h2>Start with today's medicines</h2>
+    <p class="intro" style="margin:0 auto">Add a medicine with its photo in under a minute.</p>
+    <div class="stores">
+      <a class="store" href="https://apps.apple.com/app/id6819379067"><span><small>Download on the</small><b>App Store</b></span></a>
+      <a class="store" href="https://play.google.com/store/apps/details?id=com.dosebell.app"><span><small>Get it on</small><b>Google Play</b></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="note">DoseBell is a reminder app, not medical advice and not a medical device. Do not rely on it as the only way to remember an important medicine.</div>
+    <div class="links">
+      <a href="/dosebell/privacy/">Privacy policy</a>
+      <a href="mailto:hello.apps@outlook.in">hello.apps@outlook.in</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
