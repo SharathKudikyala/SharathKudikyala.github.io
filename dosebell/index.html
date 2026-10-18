@@ -75,6 +75,11 @@ permalink: /dosebell/
   .who-card h3 { font-size: 20px; margin-bottom: 6px; }
   .who-card p { color: var(--muted); font-size: 16px; }
 
+  /* Video */
+  .video-wrap { position: relative; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden; margin-top: 30px;
+    background: #1b1b1b; box-shadow: 0 24px 60px rgba(90,40,20,.18); }
+  .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
   /* Feature rows */
   .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 50px 0; }
   .feature + .feature { border-top: 1px solid var(--line); }
@@ -136,6 +141,7 @@ permalink: /dosebell/
   <div class="wrap">
     <a class="logo" href="/dosebell/"><img src="img/icon.png" alt="">DoseBell</a>
     <nav>
+      <a href="#video">Video</a>
       <a href="#features">Features</a>
       <a href="#private">Privacy</a>
       <a href="#faq">Questions</a>
@@ -174,6 +180,18 @@ permalink: /dosebell/
       <div class="who-card"><div class="ic">👵</div><h3>Elders</h3><p>Large text, big buttons, and a photo of the actual strip or bottle, so the right medicine is recognised by sight.</p></div>
       <div class="who-card"><div class="ic">👪</div><h3>Family and caregivers</h3><p>Set it up once on a parent's phone, record instructions in your own voice, and get alerted if a dose is missed.</p></div>
       <div class="who-card"><div class="ic">❤️</div><h3>Anyone on daily medicines</h3><p>BP, diabetes, thyroid, cholesterol, heart: keep doses, readings, doctors and reports together.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="video" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">See it in action</div>
+    <h2>DoseBell in 80 seconds</h2>
+    <p class="intro">The alarm, family alerts, BP and sugar, records, the emergency card and more, filmed in the app.</p>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube-nocookie.com/embed/HDWi_JGwtwA?rel=0" title="DoseBell (Dose Bell) medicine reminder app demo" loading="lazy"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
 </section>
